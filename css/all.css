@@ -115,6 +115,37 @@ h1 {
     border-bottom: 3px solid white;
 }
 
+.fa-bars {
+    display: none;
+}
+
+.show {
+    transform: translateX(-93px);
+}
+
+@media(max-width: 576px) {
+    .fa-bars {
+        display: block;
+        color: white;
+        font-size: 20px;
+        padding: 20px 40px;
+    }
+
+    .header ul {
+        flex-direction: column;
+        position: absolute;
+        right: -110px;
+        top: 60px;
+        transition: all 0.4s;
+        background: rgba(0,0,0,0.5);
+        text-align: center;
+    }
+
+    .header li a:hover, .header li a.active {
+        border-bottom: 0px solid white;
+    }
+}
+
 .banner {
     background-image: url(../img/header_desktop@2x.png);
     background-size: cover;
@@ -138,6 +169,17 @@ h1 {
 
 .banner-content p {
     padding-top: 7px;
+}
+
+@media(max-width: 576px) {
+    .banner {
+        background-image: url(../img/header_mobile.png);
+    }
+
+    .banner-content span{
+        display: block;
+        padding-bottom: 10px;
+    }
 }
 
 .features {
@@ -199,6 +241,18 @@ h1 {
     padding-top: 10px;
 }
 
+@media(max-width: 576px) {
+    .features ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features ul li {
+        width: 50%;
+        padding-bottom: 20px;
+    }
+}
+
 .chef {
     display: flex;
     justify-content: center;
@@ -206,6 +260,23 @@ h1 {
     background: #3d1101;
     color: #efe9e7;
     padding: 0 40px;
+}
+
+@media(max-width: 768px) {
+    .chef {
+        padding: 0 20px;
+    }
+    .chef img {
+        width: 50%;
+    }
+}
+
+@media(max-width: 576px) {
+    .chef {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 25px;
+    }
 }
 
 .chef-info {
@@ -259,6 +330,18 @@ h1 {
 
 .feedbacks ul li h4 {
     text-align: right;
+}
+
+@media(max-width: 576px) {
+    .feedbacks ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedbacks ul li {
+        width: 60%;
+        padding-bottom: 20px;
+    }
 }
 
 .reservation {
@@ -328,6 +411,22 @@ button:nth-child(2) {
     background: #db4437;
 }
 
+@media(max-width:576px) {
+    .reservation img {
+        width: 75%;
+        padding: 0;
+    }
+
+    .reserve-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 75%;
+    }
+}
+
 .logos img{
     width: 40px;
 }
@@ -357,6 +456,7 @@ button:nth-child(2) {
 
 .info a {
     color: #3d1101;
+    font-size: 15px;
 }
 
 .footer ul ul {
@@ -393,6 +493,22 @@ button:nth-child(2) {
   
   .facebook-icon {
     color: #3a5795;
+  }
+
+  @media(max-width: 576px) {
+    .footer h2 {
+        padding-bottom: 10px;
+    }
+
+    .info {
+        width: 60%;
+        padding-bottom: 20px;
+    }
+
+    .footer, .footer > ul, .logos {
+        flex-direction: column;
+        align-items: center;
+    }
   }
 
   /*start of cart*/
@@ -436,7 +552,6 @@ button:nth-child(2) {
 .tools {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-bottom: 30px;
 }
 
@@ -446,13 +561,13 @@ button:nth-child(2) {
 }
 
 .search {
+    width: 60%;
     display: flex;
     align-items: center;
-    width: 75%;
 }
 
 .search input {
-    width: 85%;
+    width: 88%;
     background: #efe9e7;
     padding: 5px;
     border: 2px solid #3d1101;
@@ -472,8 +587,9 @@ button:nth-child(2) {
 .tools ul a {
     font-size: 17px;
     display: block;
-    padding: 0 10px;
+    padding: 0 12px;
     position: relative;
+    text-align: center;
 }
 
 .tools ul i {
@@ -612,6 +728,55 @@ button:nth-child(2) {
 .food button:hover {
     color: #efe9e7;
     background: #ff5e45;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        width: 30%;
+    }
+
+    .food li {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu {
+        width: 100%;
+        padding: 0 40px 20px 40px;
+        margin: 0;
+    }
+
+    .food {
+        flex-direction: column;
+    }
+
+    .food li {
+        width: 100%;
+    }
+
+    .tools {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .search {
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+    }
+
+    .tools ul {
+        text-align: end;
+    }
 }
 
 /*start of login*/
@@ -779,4 +944,23 @@ button:hover {
 
 .register-info .buttons {
     justify-content: end;
+}
+
+@media (max-width: 576px) {
+    .register-box {
+        width: 80%;
+    }
+
+    .register-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .terms, .register-info {
+        width: 100%;
+    }
+
+    .terms {
+        padding-bottom: 10px;
+    }
 }
