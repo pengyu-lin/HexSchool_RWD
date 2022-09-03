@@ -700,7 +700,7 @@ button:nth-child(2) {
 .input-info i {
     position: absolute;
     bottom: 13px;
-    left: 7px;
+    left: 8px;
 }
 
 .input-info label {
@@ -710,4 +710,73 @@ button:nth-child(2) {
 
 button:hover {
     background: #3d1101;
+}
+
+/*start of register*/
+
+.register-box {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    border-top: 3px solid #ff5e45;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.register-box > h4 {
+    padding: 15px;
+}
+
+.register-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.terms {
+    width: 45%;
+    text-align: left;
+}
+
+.terms p {
+    line-height: 1.3;
+    font-size: 17px;
+}
+
+.register-info {
+    width: 45%;
+    text-align: left;
+}
+
+.input-info .lock1 {
+    position: absolute;
+    bottom: 50px;
+    left: 8px;
+}
+
+.register-info button {
+    background: #ff5e45;
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+.register-info button:hover {
+    background: #3d1101;
+}
+
+.register-info button a {
+    color: white;
+}
+
+.register-info > a {
+    color: #ff5e45;
+}
+
+.register-info > a:hover {
+    text-decoration: underline;
+}
+
+.register-info .buttons {
+    justify-content: end;
 }
