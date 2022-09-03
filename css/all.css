@@ -241,6 +241,12 @@ h1 {
     padding-top: 10px;
 }
 
+@media(max-width: 768px) {
+    .features h2::before, .features h2::after {
+        background: transparent;
+    }
+}
+
 @media(max-width: 576px) {
     .features ul{
         flex-direction: column;
